@@ -13,17 +13,32 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var goButton: UIButton!
     
     
-    var arr = [[("1", "МатМод", "Белугина", "8:30-10:00", "415"), ("2", "ТРПО", "Шукалович", "10:10-11:40", "403")],
-                [("1", "Химия", "Блогер", "8:30-10:00", "415"), ("2", "МатМод", "Белугина", "10:10-11:40", "403"), ("3", "Экономика", "Григораш", "14:10-15:40", "509")],
-                [("1", "МатМод", "Белугина", "8:30-10:00", "415"), ("2", "МатМод", "Белугина", "8:30-10:00", "415"), ("3", "МатМод", "Белугина", "8:30-10:00", "415"), ("4", "МатМод", "Белугина", "8:30-10:00", "415")],
-                [("1", "МатМод", "Белугина", "8:30-10:00", "415"), ("2", "МатМод", "Белугина", "8:30-10:00", "415"), ("3", "МатМод", "Белугина", "8:30-10:00", "415")],
-                [("1", "КонсПрогрИЯзПр", "Михалевич В", "8:30-10:00", "415"), ("2", "Биология", "Белугина", "8:30-10:00", "415"), ("3", "БухУчет", "Старая Хуйня", "8:30-10:00", "415"), ("4", "МатМод", "Белугина", "8:30-10:00", "415")],
-                [("1", "ТестОтладкаПО", "Белугина", "8:30-10:00", "415"), ("2", "МатМод", "Белугина", "8:30-10:00", "415"), ("3", "МатМод", "Белугина", "8:30-10:00", "415")]]
+    var current: CurriculumWeek = []
+    
+    var fullCurriculum: CurriculumBothWeeks?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        goButton.layer.cornerRadius = 20
+        goButton.alpha = 0.5
+        
+        let queue = DispatchQueue(label: "vanjo_gueue")
+        queue.async {
+            RequestKBP.getData(stringURL: "https://kbp.by/rasp/timetable/view_beta_kbp/?cat=group&id=31") { (data) in
+                self.fullCurriculum = data
+                
+                self.current = self.fullCurriculum?.currentWeek ?? CurriculumWeek()
+                self.current = removeEmptyPares(arr: self.current)
+                
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
         
     }
 }

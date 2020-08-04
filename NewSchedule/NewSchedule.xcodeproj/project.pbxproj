@@ -18,7 +18,8 @@
 		451EF58D240252A9002497C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451EF58B240252A9002497C8 /* LaunchScreen.storyboard */; };
 		451EF5952402544B002497C8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EF5942402544B002497C8 /* CustomCell.swift */; };
 		451EF59724025535002497C8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EF59624025535002497C8 /* Extension.swift */; };
-		451EF59D2402C3F0002497C8 /* myCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EF59C2402C3F0002497C8 /* myCollectionFlowLayout.swift */; };
+		45677A2424D87ACA0068E2F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45677A2324D87ACA0068E2F0 /* Constants.swift */; };
+		458A048924D860000079C313 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 458A048824D860000079C313 /* SF-Pro-Rounded-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,8 @@
 		451EF58E240252A9002497C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		451EF5942402544B002497C8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		451EF59624025535002497C8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		451EF59C2402C3F0002497C8 /* myCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		45677A2324D87ACA0068E2F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		458A048824D860000079C313 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,19 +80,52 @@
 		451EF57F240252A8002497C8 /* NewSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				458A048724D85EF70079C313 /* Fonts */,
 				447FFEE52402B5EE00A47221 /* Parsing */,
+				458A048524D85AF60079C313 /* Delegates */,
+				458A048424D85ADE0079C313 /* Cell */,
+				451EF584240252A8002497C8 /* ViewController.swift */,
+				451EF59624025535002497C8 /* Extension.swift */,
+				45677A2324D87ACA0068E2F0 /* Constants.swift */,
+				451EF586240252A8002497C8 /* Main.storyboard */,
+				458A048624D85B020079C313 /* ThirdParty */,
+			);
+			path = NewSchedule;
+			sourceTree = "<group>";
+		};
+		458A048424D85ADE0079C313 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				451EF5942402544B002497C8 /* CustomCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		458A048524D85AF60079C313 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
 				451EF580240252A8002497C8 /* AppDelegate.swift */,
 				451EF582240252A8002497C8 /* SceneDelegate.swift */,
-				451EF584240252A8002497C8 /* ViewController.swift */,
-				451EF5942402544B002497C8 /* CustomCell.swift */,
-				451EF59624025535002497C8 /* Extension.swift */,
-				451EF59C2402C3F0002497C8 /* myCollectionFlowLayout.swift */,
-				451EF586240252A8002497C8 /* Main.storyboard */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		458A048624D85B020079C313 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
 				451EF589240252A9002497C8 /* Assets.xcassets */,
 				451EF58B240252A9002497C8 /* LaunchScreen.storyboard */,
 				451EF58E240252A9002497C8 /* Info.plist */,
 			);
-			path = NewSchedule;
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		458A048724D85EF70079C313 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				458A048824D860000079C313 /* SF-Pro-Rounded-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451EF58D240252A9002497C8 /* LaunchScreen.storyboard in Resources */,
+				458A048924D860000079C313 /* SF-Pro-Rounded-Regular.otf in Resources */,
 				451EF58A240252A9002497C8 /* Assets.xcassets in Resources */,
 				451EF588240252A8002497C8 /* Main.storyboard in Resources */,
 			);
@@ -172,7 +208,7 @@
 				451EF581240252A8002497C8 /* AppDelegate.swift in Sources */,
 				451EF5952402544B002497C8 /* CustomCell.swift in Sources */,
 				451EF583240252A8002497C8 /* SceneDelegate.swift in Sources */,
-				451EF59D2402C3F0002497C8 /* myCollectionFlowLayout.swift in Sources */,
+				45677A2424D87ACA0068E2F0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,8 +354,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 779L93M27G;
-				INFOPLIST_FILE = NewSchedule/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = NewSchedule/ThirdParty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,8 +373,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 779L93M27G;
-				INFOPLIST_FILE = NewSchedule/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = NewSchedule/ThirdParty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

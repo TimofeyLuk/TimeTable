@@ -18,21 +18,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     //MARK: -CollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arr[section].count
+        return current[section].count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return arr.count
+        return current.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCollectionViewCell", for: indexPath) as! CustomCell
         
-        cell.numberOfPare.text = arr[indexPath.section][indexPath.row].0
-        cell.subject.text = arr[indexPath.section][indexPath.row].1
-        cell.teacher.text = arr[indexPath.section][indexPath.row].2
-        cell.time.text = arr[indexPath.section][indexPath.row].3
-        cell.numberOfRoom.text = arr[indexPath.section][indexPath.row].4
+        cell.numberOfPare.text = current[indexPath.section][indexPath.row]?.4
+        cell.subject.text = current[indexPath.section][indexPath.row]?.0
+        cell.teacher.text = current[indexPath.section][indexPath.row]?.1
+        cell.numberOfRoom.text = current[indexPath.section][indexPath.row]?.2
         
         cell.layer.borderWidth = 1.0
         cell.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
@@ -48,16 +47,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height/6.7)
+        return CGSize(width: UIScreen.main.bounds.width-50, height: SizeEntity.sizeForCell * SizeEntity.screenHeight/800)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 25, left: 25, bottom: UIScreen.main.bounds.height/6.4, right: 25)
+        return UIEdgeInsets(top: 15, left: 25, bottom: 50, right: 25)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 10
+//    }
+    
+    
     
     
     
