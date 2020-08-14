@@ -16,15 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        if #available(iOS 13.0, *) {
-            
-        } else {
-            let window = UIWindow(frame: UIScreen.main.bounds)
-
-            let mainstoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewcontroller: UIViewController = mainstoryboard.instantiateViewController(withIdentifier: "myViewController")
-            window.rootViewController = newViewcontroller
-        }
+//        if #available(iOS 13.0, *) {
+//
+//        } else {
+//            let window = UIWindow(frame: UIScreen.main.bounds)
+//
+//            let mainstoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let newViewcontroller: UIViewController = mainstoryboard.instantiateViewController(withIdentifier: "myViewController")
+//            window.rootViewController = newViewcontroller
+//        }
         
         return true
     }

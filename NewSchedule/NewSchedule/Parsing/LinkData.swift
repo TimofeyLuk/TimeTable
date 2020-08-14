@@ -10,7 +10,7 @@ import Foundation
 
 let linkDispGroup = DispatchGroup()
 
-func dictionaryRequest () -> [String] {
+func dictionaryRequest() -> [String] {
     
     linkDispGroup.enter()
     guard let url = URL(string: "https://kbp.by/rasp/timetable/view_beta_kbp/?q=") else { return [""] }
@@ -33,7 +33,7 @@ func dictionaryRequest () -> [String] {
 
 func getLinkDictionary() -> [String: String] {
  
-    let dataArr =  dictionaryRequest()
+    let dataArr = dictionaryRequest()
     
     var linkDictionary: [String: String] = [:]
     for element in dataArr {
