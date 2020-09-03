@@ -10,6 +10,7 @@
 		44527474240501D500267923 /* LinkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44527473240501D500267923 /* LinkData.swift */; };
 		447FFEE72402B62000A47221 /* RequestKBP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FFEE62402B62000A47221 /* RequestKBP.swift */; };
 		447FFEE92402B6E500A47221 /* ParsingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FFEE82402B6E500A47221 /* ParsingMethods.swift */; };
+		448B2B5E24E93E3B00A9EA42 /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B2B5D24E93E3B00A9EA42 /* LessonCell.swift */; };
 		4508C55024E59F0B00C3F9E2 /* MultiDirectionOrganizedScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 4508C54F24E59F0B00C3F9E2 /* MultiDirectionOrganizedScroll.m */; };
 		451EF581240252A8002497C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EF580240252A8002497C8 /* AppDelegate.swift */; };
 		451EF583240252A8002497C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EF582240252A8002497C8 /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 		44527473240501D500267923 /* LinkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkData.swift; sourceTree = "<group>"; };
 		447FFEE62402B62000A47221 /* RequestKBP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestKBP.swift; sourceTree = "<group>"; };
 		447FFEE82402B6E500A47221 /* ParsingMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingMethods.swift; sourceTree = "<group>"; };
+		448B2B5D24E93E3B00A9EA42 /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LessonCell.swift; path = NewSchedule/LessonCell.swift; sourceTree = SOURCE_ROOT; };
 		4508C54E24E59F0B00C3F9E2 /* MultiDirectionOrganizedScroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiDirectionOrganizedScroll.h; sourceTree = "<group>"; };
 		4508C54F24E59F0B00C3F9E2 /* MultiDirectionOrganizedScroll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiDirectionOrganizedScroll.m; sourceTree = "<group>"; };
 		450936E824DE083000533963 /* NewSchedule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewSchedule-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -99,9 +101,10 @@
 				458A048524D85AF60079C313 /* Delegates */,
 				458A048424D85ADE0079C313 /* Cell */,
 				451EF584240252A8002497C8 /* ViewController.swift */,
+				448B2B5D24E93E3B00A9EA42 /* LessonCell.swift */,
+				451EF586240252A8002497C8 /* Main.storyboard */,
 				451EF59624025535002497C8 /* Extension.swift */,
 				45677A2324D87ACA0068E2F0 /* Constants.swift */,
-				451EF586240252A8002497C8 /* Main.storyboard */,
 				458A048624D85B020079C313 /* ThirdParty */,
 				450936EC24DE0BA500533963 /* SomeObjectiveCStuff */,
 			);
@@ -221,6 +224,7 @@
 				454F10B424DC21D6000989A6 /* DoubleInsideCollectionViewCell.swift in Sources */,
 				451EF585240252A8002497C8 /* ViewController.swift in Sources */,
 				44527474240501D500267923 /* LinkData.swift in Sources */,
+				448B2B5E24E93E3B00A9EA42 /* LessonCell.swift in Sources */,
 				447FFEE72402B62000A47221 /* RequestKBP.swift in Sources */,
 				447FFEE92402B6E500A47221 /* ParsingMethods.swift in Sources */,
 				451EF581240252A8002497C8 /* AppDelegate.swift in Sources */,
@@ -374,7 +378,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 779L93M27G;
+				DEVELOPMENT_TEAM = JSY8H6LPZF;
 				INFOPLIST_FILE = NewSchedule/ThirdParty/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,7 +401,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 779L93M27G;
+				DEVELOPMENT_TEAM = JSY8H6LPZF;
 				INFOPLIST_FILE = NewSchedule/ThirdParty/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
